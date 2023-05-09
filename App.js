@@ -1,20 +1,47 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+/* eslint-disable prettier/prettier */
+import React, { useState, useEffect } from 'react'
+import { Text, View, ActivityIndicator, StyleSheet } from 'react-native'
+import { NavigationContainer } from '@react-navigation/native'
+import Tabs from './src/components/Tabs'
+import Counter from './src/demonstration/Counter'
+import {useGetWeather} from './src/hooks/useGetWeather'
+import ErrorItem from './src/components/ErrorItem'
+import OurButton from './src/demonstration/OurButton'
 
-export default function App() {
+
+
+const App = () => {
+  const [loading, error, weather] = useGetWeather()
+
+
+  if(weather && weather.list && !loading) {
+    return (
+      <View style={styles.container}>
+        <NavigationContainer>
+          <Tabs weather={weather} />
+        </NavigationContainer>
+      </View>
+        
+    )
+  }
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      {/* <OurButton /> */}
+      {error ? <ErrorItem /> : <ActivityIndicator size={'large'} color={'#FFEFCB'} /> }
     </View>
-  );
-}
+  )
+  
 
+  
+}
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
-  },
-});
+    flex: 1,
+    backgroundColor: '#FFEFCB'
+  }
+})
+
+
+export default App

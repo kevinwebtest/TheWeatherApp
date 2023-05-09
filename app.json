@@ -1,13 +1,14 @@
 {
   "expo": {
-    "name": "TheWeatherApp",
+    "name": "The Weather App",
     "slug": "TheWeatherApp",
+    "description": "Weather app lets you know the weather of your current location.",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/icon-weather.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/splash-weather.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
