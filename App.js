@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React, { useState, useEffect } from 'react'
-import { Text, View, ActivityIndicator, StyleSheet } from 'react-native'
+import { StatusBar, View, ActivityIndicator, StyleSheet } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import Tabs from './src/components/Tabs'
 import Counter from './src/demonstration/Counter'
@@ -17,6 +17,7 @@ const App = () => {
   if(weather && weather.list && !loading) {
     return (
       <View style={styles.container}>
+        <StatusBar backgroundColor="#FFEFCB" barStyle="dark-content" />
         <NavigationContainer>
           <Tabs weather={weather} />
         </NavigationContainer>
@@ -31,8 +32,6 @@ const App = () => {
       {error ? <ErrorItem /> : <ActivityIndicator size={'large'} color={'#FFEFCB'} /> }
     </View>
   )
-  
-
   
 }
 const styles = StyleSheet.create({

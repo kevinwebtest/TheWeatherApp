@@ -8,9 +8,9 @@
     "icon": "./assets/icon-weather.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash-weather.png",
+      "image": "./assets/splash-weather2.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#FFEFCB"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -21,13 +21,13 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/adaptive-icon-weather.png",
+        "backgroundColor": "#FFEFCB"
       },
       "package": "com.kevin_setiawan.TheWeatherApp"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/icon-weather.png"
     },
     "extra": {
       "eas": {

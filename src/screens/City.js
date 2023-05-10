@@ -86,9 +86,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#CFB284',
     width: '80%',
     alignSelf: 'center',
-    borderRadius: 10,
+    borderRadius: 15,
     borderWidth: 3,
-    paddingVertical: 10
+    paddingVertical: 10,
+    borderColor: '#353839'
   },
   riseSetText: {
     fontSize: 20,
